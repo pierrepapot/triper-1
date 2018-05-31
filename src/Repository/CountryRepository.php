@@ -23,21 +23,21 @@ class CountryRepository extends ServiceEntityRepository
         //($dist=null, $lat=null, $long=null, $dens=null, $tempAvg=null $lang1=null,$lang2=null,$lang3=null, $cont=null, $devise=null)
         //DEMO
         $pourcentageMinLang = 50; //50%
-        $toleranceTemp =3;
+        $toleranceTemp =2;
         $toleranceDensite =20;
-
+/*
         $dist=null; //radio
         $lat=null;
         $long=null;
         $dens=null; //radio
-        $tempAvg=-5;//text
+        $tempAvg=null;//text
         $lang1=null;//checkbox
         $lang2=null;
         $lang3=null;
-        $cont = null;//radio
+        $cont = 'Europe';//radio
         $devise = null;//radio
         //FIN DEMO
-
+*/
 
         $qb=$this->createQueryBuilder('c');
         $qb->addSelect('ci');
@@ -46,7 +46,7 @@ class CountryRepository extends ServiceEntityRepository
         $qb->join('c.id2', 'la');
 
 
-        if(!empty($dist)){
+        if(!is_null($dist)){
             $qb->andWhere('((SQRT(((:latStart-ci.latitude)*(:latStart-ci.latitude))+((:longStart-ci.longitude)*(:longStart-ci.longitude)))*111.16)<:dist)');
             $qb->setParameter('latStart', $lat);
             $qb->setParameter('longStart', $long);
@@ -57,7 +57,7 @@ class CountryRepository extends ServiceEntityRepository
              * ((SQRT(((:latStart-ci.latitude)*(:latStart-ci.latitude))+((:longStart-ci.longitude)*(:longStart-ci.longitude)))*111.16)<:dist)
              */
         }
-        if(!empty($dens)){
+        if(!is_null($dens)){
             $densMin = $dens -$toleranceDensite;
             $densMax =$dens +$toleranceDensite;
             $qb->andWhere('(c.population/c.area)> :densMin AND (c.population/c.area) < :densMax');
@@ -65,7 +65,7 @@ class CountryRepository extends ServiceEntityRepository
             $qb->setParameter('densMax', $densMax);
 
         }
-        if(!empty($tempAvg)){
+        if(!is_null($tempAvg)){
             $tempMin = $tempAvg-$toleranceTemp;
             $tempMax = $tempAvg+$toleranceTemp;
             $qb->andWhere('c.temp_average > :tempMin AND c.temp_average < :tempMax');
@@ -75,12 +75,12 @@ class CountryRepository extends ServiceEntityRepository
         }
         if(!empty($cont)){
             $qb->andWhere('c.continent = :cont');
-            $qb->setParameter(':cont', $cont);
+            $qb->setParameter('cont', $cont);
         }
 
         if(!empty($devise)){
             $qb->andWhere('c.money_id = :devise');
-            $qb->setParameter(':devise', $devise);
+            $qb->setParameter('devise', $devise);
         }
 
         if(!empty($lang3)){

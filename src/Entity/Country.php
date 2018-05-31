@@ -188,6 +188,8 @@ class Country implements \JsonSerializable
     public function jsonSerialize()
     {
         // TODO: Implement jsonSerialize() method.
+
+
         return[
             "name"=> $this->getName(),
             "capitale"=>$this->getCapital()->getName(),
