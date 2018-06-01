@@ -7,7 +7,7 @@
       "name": "distance",
       "label": "Distance maximale :",
       "type": "radio",
-      "texte": "Distance maximale :",
+      "texte": "Distance maximale",
       "id": "densForm",
       "option":[
         {"value":1000, "id":"dist10","texte":"- de 1000km"},
@@ -22,7 +22,7 @@
       "name": "dens",
       "label": "Population ?",
       "type": "radio",
-      "texte": "Population ?",
+      "texte": "Population",
       "id": "densForm",
       "option":
       [
@@ -37,14 +37,14 @@
       "name": "temp",
       "label": "Température idéale :",
       "type": "text",
-      "texte": "Température idéale ?",
+      "texte": "Température idéale",
       "id": "tempForm"
     },
     {
       "name": "lang",
       "label": "Langue parlée en majorité : ",
       "type": "checkbox",
-      "texte": "Langue parlée en majorité : ",
+      "texte": "Langue parlée en majorité",
       "id": "langForm",
       "option":
       [
@@ -63,7 +63,7 @@
       "name": "cont",
       "label": "Continent : ",
       "type": "radio",
-      "texte": "Continent :",
+      "texte": "Continent",
       "id": "contForm",
       "option":
       [
@@ -80,7 +80,7 @@
       "name": "devise",
       "label": "Devise utilisée : ",
       "type": "radio",
-      "texte": "Devise utilisée : :",
+      "texte": "Devise utilisée",
       "id": "deviseForm",
       "option":
       [

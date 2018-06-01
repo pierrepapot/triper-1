@@ -59,5 +59,21 @@ function addCritere(critere){
         }
     );
 }
+
+// FUNCTION QUI PERMET DE SELECT LE CRITERE A AJOUTER :
+function selectCritere(){
+    $('form').append('<label for="critere">Critère</label>');
+    $('form').append('<select name="critere"/>');
+    $.getJSON('criteres.json',
+        function (file) {
+            $(file.data).each(
+                function(e){
+                    $('select').append('<option value="'+this.name+'">'+this.texte+'</option>');
+                });
+        })
+    $('form').append('</select>');
+    }
+
 //afficherToutLeFormulaire();
 //addCritere('cont');
+//selectCritere();
