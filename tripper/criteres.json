@@ -1,0 +1,64 @@
+{ 
+
+  "status":"ok",
+  "message":"criteres",
+  "data":[
+        {
+          "idDiv": "divTemp",
+          "name": "temperature",
+          "label": "Température :",
+          "id": "temp",
+          "idOption": "tempO",
+          "option": 
+          [
+            {"name": "tempRadio",
+            "value": "0",
+            "id": "temp1",
+            "texte": "0°"},
+            {"name": "tempRadio",
+            "value": "5",
+            "id": "temp2",
+            "texte": "5°"},
+            {"name": "tempRadio",
+            "value": "10",
+            "id": "temp3",
+            "texte": "10°"}
+          ]
+        },
+        {
+          "idDiv": "divDista",
+          "name": "distance",
+          "label": "Distance :",
+          "id": "dista",
+          "idOption": "distaO",
+          "option":
+          [
+            {"name": "dist",
+             "value": "1000",
+             "id": "dist1",
+             "texte": "1000km"},
+            {"name": "dist",
+             "value": "2500",
+             "id": "dist2",
+             "texte": "2500km"} 
+          ]
+        },
+        {
+          "idDiv": "divTempe",
+          "name" : "tempe",
+          "label": "Température idéale :",
+          "id": "tp",
+          "idOption": "tpO",
+          "option":[
+            {"name": "test",
+             "value": "valueTest",
+             "id": "temp01",
+             "texte": "test"},
+            {"name": "test",
+             "value": "meuhmeuh",
+             "id": "temp02",
+             "texte": "meumeuh"}
+          ]
+        }
+        ]
+}

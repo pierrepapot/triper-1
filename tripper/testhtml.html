@@ -1,0 +1,70 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+
+                    <h2 class="text-center">Chercher une destination</h2>
+                    
+
+                        <form method="get" id="critRecherche">
+                        <div class="container">
+
+                            <div id="generate" class="row">
+                                <div class="col-8">
+                                    <button type='button' class='btn btn-primary btn-block' data-toggle='modal' data-target="#exampleModal">"+crit.label+"</button>
+                                </div>
+                                <div class="col-4">
+                                    <span id="val" class="badge badge-primary">test</span>
+                                </div>
+                            </div>
+
+                        </div>
+                                    <div class='modal fade' id='exampleModal' tabindex='-1' role='dialog' aria-labelledby='"+crit.name+"' aria-hidden='true'>
+                                        <div class='modal-dialog' role='document'>
+                                            <div class='modal-content'>
+                                                <div class='modal-header'>
+                                                    <h5 class='modal-title' id='"+crit.name+"'>"+crit.label+"</h5>
+                                                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+                                                    <span aria-hidden='true'>&times;</span>
+                                                    </button>
+                                                 </div>
+                                                <div class='modal-body'>
+                                                <fieldset class='form-group'>
+                                                    <div class='row'>
+                                                        <div class='col-sm-10' id='options'>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                                </div>
+                                                <div class='modal-footer'>
+                                                    <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
+                                                    <button type='button' class='btn btn-primary'>Save changes</button>  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                            
+                            <div class="col">
+                            <button type="submit" class="btn btn-primary btn-block">Rechercher</button> 
+                            </div>
+                        </form>
+
+
+
+		<!-- <button type='button' class='btn btn-primary' data-toggle='modal' data-target='#distance'>Distance :</button><div class='modal fade' id='distance' tabindex='-1' role='dialog' aria-labelledby='distance' aria-hidden='true'><div class='modal-dialog' role='document'><div class='modal-content'><div class='modal-header'><h5 class='modal-title' id='distance'>Distance :</h5><button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div><div class='modal-body'><fieldset class='form-group'><div class='row'><div class='col-sm-10' id='options'><div class='form-check'><input class='form-check-input' type='radio' name='- de 1000km' id='undefined' value='1000'><label class='form-check-label' for='undefined'>undefined</label></div><div class='form-check'><input class='form-check-input' type='radio' name='- de 2500km' id='undefined' value='2500'><label class='form-check-label' for='undefined'>undefined</label></div></div></div></fieldset></div><div class='modal-footer'><button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button><button type='button' class='btn btn-primary'>Save changes</button></div></div></div></div> -->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+	</html>
+	
